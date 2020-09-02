@@ -7,7 +7,7 @@
     "PHP"
   ],
   "repository": "https://github.com/alibaba0507/synonyms",
-  "success_url": "/dict.php",
+  "success_url": "/go.php",
   "image": "heroku/php",
   "addons": [
   ],
