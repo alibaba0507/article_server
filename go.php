@@ -4,8 +4,8 @@
 //	echo "<br> >>>>>>>>>>>>>>>>>>>>>>> END POST >>>>>>>>>>>>>>>>>>>>>>>>>>><br>";
 	$keyword= filter_var($_POST['keyword'], FILTER_SANITIZE_SPECIAL_CHARS); 
     //debug(">>>>>>>>>>>>>>>>>>>> SEND KEYWORD >>>>>>>>>>>",$keyword);
-    $keywords=filter_var($_POST['keywords'], FILTER_SANITIZE_SPECIAL_CHARS);// $_POST['keywords'];
-    $urllink =filter_var($_POST['urllink'], FILTER_SANITIZE_SPECIAL_CHARS);// $_POST['urllink'];
+    $keywords=(isset($_POST['keywords']))?filter_var($_POST['keywords'], FILTER_SANITIZE_SPECIAL_CHARS):"";// $_POST['keywords'];
+    $urllink =(isset($_POST['urllink']))?filter_var($_POST['urllink'], FILTER_SANITIZE_SPECIAL_CHARS):"";// $_POST['urllink'];
       if ($_POST['feedsource'] == 'yahooanswers'){
 		 // $urlsource = $baseurl ."/yahooanswers.php";//?
 		 $fields = array ('keyword' => (($keyword)),
