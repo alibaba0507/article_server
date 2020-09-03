@@ -45,6 +45,9 @@
 // This class allows us to do JavaScript like assignements to innerHTML
 require_once(dirname(__FILE__).'/JSLikeHTMLElement.php');
 
+require_once('Encoding.php');
+use \ForceUTF8\Encoding;  // It's namespaced now.
+
 // Alternative usage (for testing only!)
 // uncomment the lines below and call Readability.php in your browser 
 // passing it the URL of the page you'd like content from, e.g.:
@@ -113,7 +116,7 @@ class Readability
 		/* Turn all double br's into p's */
 		$html = preg_replace($this->regexps['replaceBrs'], '</p><p>', $html);
 		$html = preg_replace($this->regexps['replaceFonts'], '<$1span>', $html);
-		$html = mb_convert_encoding($html, 'HTML-ENTITIES', "UTF-8");
+		$html =  Encoding::toUTF8($html);//mb_convert_encoding($html, 'HTML-ENTITIES', "UTF-8");
 		if (trim($html) == '') $html = '<html></html>';
 		if ($parser=='html5lib' && ($this->dom = HTML5_Parser::parse($html))) {
 			// all good
