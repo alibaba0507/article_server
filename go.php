@@ -1,7 +1,13 @@
 <?php
+ set_error_handler (
+    function($errno, $errstr, $errfile, $errline) {
+        throw new ErrorException($errstr, $errno, 0, $errfile, $errline);     
+    }
+ );
   //  echo ">>>>>>>>>>>>>>>>>>>>>>>>> POST REQUEST >>>>>>>>>>>>>>>>>>><br>"; 
   //  echo str_replace('  ', '&nbsp; ', nl2br(print_r($_POST, true)));
 //	echo "<br> >>>>>>>>>>>>>>>>>>>>>>> END POST >>>>>>>>>>>>>>>>>>>>>>>>>>><br>";
+ try{
 	$keyword= filter_var($_POST['keyword'], FILTER_SANITIZE_SPECIAL_CHARS); 
     //debug(">>>>>>>>>>>>>>>>>>>> SEND KEYWORD >>>>>>>>>>>",$keyword);
     $keywords=(isset($_POST['keywords']))?filter_var($_POST['keywords'], FILTER_SANITIZE_SPECIAL_CHARS):"";// $_POST['keywords'];
@@ -31,6 +37,10 @@
 	 
 	 $jsonstring = json_encode($feed);
      echo $jsonstring;
-
-    die();
+     die();
+   }catch(Exception $e) {
+    echo 'Message: ' .$e->getMessage();
+	die();
+   }
+    
 ?>
