@@ -31,7 +31,7 @@ $options->enabled = true;
 // true or 'user' (default) - let user decide
 // 'admin' - debug works only for logged in admin users
 // false - disabled
-$options->debug = true;
+$options->debug = false;//true;
 $options->print_screen = false;//true;
 
 // Default entries
