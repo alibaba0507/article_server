@@ -1,0 +1,6 @@
+title: //h2
+author: //ul[@class="postmetadata clearfix"]/li[@class="author"]
+date: //ul[@class="postmetadata clearfix"]/li[2]
+body: //div[@id="prcontent"]
+strip: //div[@class="ed"]
+test_url: http://uxdesign.smashingmagazine.com/2011/10/06/not-your-parents-mobile-phone-ux-design-guidelines-smartphones/

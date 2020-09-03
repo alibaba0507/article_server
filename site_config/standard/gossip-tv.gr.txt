@@ -1,0 +1,6 @@
+body: //div[@class='node-inner']//img[@width='650'] | //div[@class='storybody']
+title: //h2[@class='storytitle']
+prune: no
+tidy: no
+
+test_url: http://www.gossip-tv.gr/story/158902/aggelike-daliane-semera-duskoleuontai-oloi-sta-epaggelmatika-tous

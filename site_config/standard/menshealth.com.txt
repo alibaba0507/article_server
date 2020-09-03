@@ -1,0 +1,6 @@
+convert_double_br_tags: [yes]
+body: //div[@id='leftside']
+title: //h2
+Author: substring-after(//h4, 'By ')
+Strip: //span
+test_url: http://www.menshealth.com/mhlists/nice_guy_tips/printer.php

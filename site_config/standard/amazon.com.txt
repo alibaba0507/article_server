@@ -1,0 +1,6 @@
+title: //span[@id = 'btAsinTitle']
+body: //div[@id = 'buyBoxContent'] | //div[@id='productDescription']
+strip_id_or_class: quantityDropdownDiv
+strip_id_or_class: addToCartSpan
+strip_id_or_class: oneClickDiv
+prune: no

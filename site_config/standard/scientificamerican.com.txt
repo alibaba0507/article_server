@@ -1,0 +1,13 @@
+# meta data
+title://h1[@class = 'articleTitle']
+author:substring-after(//span[@class = 'byline'],'By ')
+date:substring-before(//span[@class = 'datestamp'],'|')
+
+#body content
+body://div[@id = 'articleContent']
+next_page_link://li[@id = 'flairPagination']/a[last()]
+
+#cleanup
+strip://div[@class = 'fsgBooks']
+
+test_url: http://www.scientificamerican.com/article.cfm?id=do-brain-scans-comatose-patients-reveal-conscious-state

@@ -1,0 +1,10 @@
+title: //title
+author: //span/a
+date: substring-after(//small,'Published:')
+
+strip: //h1[@class='vert_class']
+strip: //h1[@class='headline']
+strip: //img[contains(@alt,'TribLIVE')]
+
+#strip: //h6
+test_url: http://triblive.com/sports/1893525-74/nba-dejankovacevic-heat-miller-wednesday-celtics-joestarkey-basketball-cup-game

@@ -1,0 +1,3 @@
+body: //div[@cpms_content]//h2[@class='Lead'] | //div[@cpms_content]//p[@class='Normal'] | //div[@cpms_content]//table
+
+test_url: http://vnexpress.net/gl/xa-hoi/2011/04/tim-thay-nan-nhan-cuoi-cung-vu-sap-mo-da-o-len-co/

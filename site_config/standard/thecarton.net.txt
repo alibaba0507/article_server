@@ -1,0 +1,8 @@
+title: //h2[@class='post-title']
+author:string('Shawn')
+date: substring-before(//p[@class='date'],' &infin;')
+
+strip: //h2[@class='post-title']
+strip: //div[@id='footer']
+strip: //p[@class='date']
+test_url: http://thecarton.net/2012/03/24/reinstalling-lion

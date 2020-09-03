@@ -1,0 +1,2 @@
+next_page_link: //a[contains(@href, 'n=2')] | //a[contains(@href, 'n=3')] | //a[contains(@href, 'n=4')] | //a[contains(@href, 'n=5')] | //a[contains(@href, 'n=6')] | //a[contains(@href, 'n=7')] | //a[contains(@href, 'n=8')] | //a[contains(@href, 'n=9')] | //a[contains(@href, 'n=10')]
+test_url: http://wt.yandex.ru/wt?u=http%3A%2F%2Fhabrahabr.ru%2Fpost%2F146705%2F

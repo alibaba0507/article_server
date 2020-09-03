@@ -1,0 +1,22 @@
+# author's name is not isolated as a tag.... ugh
+title: //csn_blogST_headline/h1
+body: //csn_blogST_main
+date: //csn_blogST_headline/child::text()
+
+#junk above and around the
+strip_id_or_class: hider
+strip_id_or_class: right_blog
+strip_id_or_class: footer
+strip_id_or_class: masthead
+
+#blog title, links to other blogs, related videos
+strip_id_or_class: video_lightbox
+strip: //div[contains(@style, 'none')]
+
+#related stories
+strip_id_or_class: feedtemplate_related
+
+#words "RELATED STORIES" and "COMMENTS" from bottom
+strip_id_or_class: landing_eaglestalk_354
+strip_id_or_class: landing_eaglestalk_374
+test_url: http://www.csnphilly.com/blog/eagles-talk/post/Ranking-the-top-six-backs-in-Eagles-hist?blockID=639008&feedID=692

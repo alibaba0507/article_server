@@ -1,0 +1,12 @@
+# This filter is tested on:
+# http://www.douban.com/note/215003067/
+# http://www.douban.com/note/213540049/
+# http://www.douban.com/group/topic/31140104/
+
+title: //*[@class='note-header']//h1
+author: //*[@class='info']//h1 | //span[contains(@class, 'pl20')]//a
+date://span[contains(@class, 'pl')]|//span[contains(@class, 'color-green')]
+body://div[contains(@class, 'note')]|//div[contains(@class, 'topic-content')]
+strip://h3
+convert_double_br_tags: yes
+test_url: http://www.douban.com/group/topic/31140104/

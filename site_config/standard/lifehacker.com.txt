@@ -1,0 +1,25 @@
+# Adds author text: Gawker sites commonly show as "Author: View Profile"
+author://a[@class="plus-icon modfont"]
+
+# Remove login/comment text
+strip: //*[(@class="presence_control_external smalltype")]
+
+strip: //div[@class="nodebyline modfont"]
+
+
+
+# Remove print header
+strip: //div[@id='printhead']/h1
+
+# Remove 'content is restricted'
+strip: //div[@id='agegate_IDHERE']
+
+# Remove follow text
+strip: //*[(@class="permalink_ads")]
+
+# Remove view/comment count
+strip: //div[@id='wrapper']/div[2][@class='postmeta_permalink_wrapper']/div[1][@class='postmeta_permalink']/div[2][@class='pm_line']
+
+# Remove contact text
+strip: //div[@id='wrapper']/div[1][@class='content permalink']/p[6][@class='contactinfo']
+test_url: http://lifehacker.com/5925801/how-can-i-turn-vague-goals-into-actionable-to+dos

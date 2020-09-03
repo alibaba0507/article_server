@@ -1,0 +1,7 @@
+author: //div[@id="infos"]/h4/a
+date: //p[@class="details"]
+body: //div[@class="external"]
+strip_id_or_class: footer_feature
+strip: //div[@class="external"]/h5[position()=1]
+strip: //div[@class="external"]/h2
+test_url: http://motherboard.vice.com/2012/7/19/what-to-do-with-america-s-parking-lot-blight-an-interview-with-mit-urban-planning-professor-eran-ben-joseph--2

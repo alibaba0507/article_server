@@ -1,0 +1,32 @@
+# Carlo Zottmann, carlo@zottmann.org
+# Johannes Stühler, johannes.stuehler@googlemail.com
+# A. Niepel, narya.de@gmail.com 
+# &ndash; added single_page_link
+# - added author and title search for single page link
+
+title: //h1
+
+# author in default view
+author: //address[@class="author"]/a/span
+# author in single page (print) view
+author: //address[@class="author"]/span
+
+# date in default view
+date: //div[@class="header"]//p[@class="updated"]/span
+# date in single page (print) view
+date: //div[@class="header"]//p[@class="updated"]
+
+strip_image_src: http://polpix.sueddeutsche.com
+
+strip: //div/a/img/following-sibling::span  |  //*[@id='relatedcontent']  |  //p[@class='bannerAnzeige']  |  //div[@class='articleheader']  |  //div[contains(@class,'galleried')]//a/following-sibling::*  | //p[string()='ANZEIGE']
+
+strip_id_or_class: articlepaging
+strip_id_or_class: sociallinks
+strip_id_or_class: articlesidebar
+strip_id_or_class: bookmarking
+strip_id_or_class: headslot
+
+# Use link to print article for single page view
+single_page_link: //a[contains(@href, '/2.220/')]
+
+test_url: http://www.sueddeutsche.de/geld/schuldenkrise-wie-die-politik-den-euro-retten-kann-1.1119866

@@ -1,0 +1,16 @@
+body: //div[@class='content']
+prune: no
+strip_id_or_class: infobar
+strip_id_or_class: header
+strip_id_or_class: bottom
+strip_id_or_class: side
+strip_id_or_class: expando
+strip_id_or_class: flat-list
+strip_id_or_class: tagline
+strip: //div[@class='collapsed']
+strip: //div[@class='collapsed c1']
+strip_id_or_class: morecomments
+strip: //div[@id='siteTable']
+strip: //div[@class='panestack-title']
+strip: //div[@class='menuarea spacer']
+test_url: http://www.reddit.com/r/politics/comments/edk8x/comcast_demands_toll_be_paid_for_traffic/

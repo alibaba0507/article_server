@@ -1,0 +1,6 @@
+date: //meta[@name="published"]/@content
+title: //div[@id='contentBody']//h1
+body: //div[@id='storyMediaBox'] | //div[contains(@class, 'storyText')]
+prune: no
+
+test_url: http://www.cbsnews.com/8301-201_162-57366361/rescued-americans-dad-proud-of-the-u.s/

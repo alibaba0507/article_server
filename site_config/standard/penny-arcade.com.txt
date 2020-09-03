@@ -1,0 +1,7 @@
+# 2012-01-14 carlo@zottmann.org &ndash; fixed title, body; added author, date
+
+title: //div[@class="title"]/h2/a
+body: //div[@class="post"]
+author: //p[@class="iconEmail"]/a
+date: //p[@class="iconDate"]
+test_url: http://penny-arcade.com/2012/01/13/i-put-some-news-in-your-news

@@ -1,0 +1,6 @@
+title: //a[@class='journal-entry-navigation-current']
+author: //span[@class='posted-by']
+date: //span[@class='posted-on']
+body: //div[@class='body']
+footnotes: [yes]
+test_url: http://www.tuckreview.com/blog/2012/6/5/how-i-handle-paper.html

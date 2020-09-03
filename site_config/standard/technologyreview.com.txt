@@ -1,0 +1,14 @@
+title: //h2
+date: //p[@class='date']
+author: substring-after(//p[@class='byline'], 'By ')
+body: //div[@class='maincontent']
+
+single_page_link: //a[contains(@href, '/printer_friendly_')]
+
+strip: //h2
+
+strip_id_or_class: date
+strip_id_or_class: byline
+strip_id_or_class: articleAd
+
+test_url: http://www.technologyreview.com/computing/40184/

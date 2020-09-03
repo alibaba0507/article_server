@@ -1,0 +1,6 @@
+title: //meta[@name='title']/@content
+author: //meta[@name='author']/@content
+body: //*[@id='article']/div[@class='photo'] | //*[@id='article']/h2 | //*[@id='article']/div[@class='texte']
+date: //time[@pubdate]/@datetime
+prune: no
+test_url: http://www.lefigaro.fr/environnement/2011/11/10/01029-20111110ARTFIG00801-la-chine-confrontee-a-un-immense-defi-ecologique.php

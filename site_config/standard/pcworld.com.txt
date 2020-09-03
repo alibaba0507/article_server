@@ -1,0 +1,10 @@
+author: //meta[@name="creator"]/@content
+body: //div[@id="articleBodyContent"]
+strip: //div[@id="topicNav"]
+strip: //div[@class="recommend"]
+strip: //div[@id="syndication"]
+strip: //div[@id="smbRightSubscribe"]
+strip: //div[@id="industryWebcasts"]
+strip: //div[@id="smbWhitepaperWrap"]
+strip: //div[@id="bizPromo"]
+test_url: http://www.pcworld.com/businesscenter/article/252989/ibm_to_develop_telescope_data_analysis_system.html%23tk.rss_news

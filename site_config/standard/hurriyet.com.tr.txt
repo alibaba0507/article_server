@@ -1,0 +1,3 @@
+title: //div[@class='HaberDetayTitleHold Title']/h1
+author: //div[@class='HaberDetayTitleHold Title']/h1
+test_url: http://www.hurriyet.com.tr/ekonomi/19490260.asp
