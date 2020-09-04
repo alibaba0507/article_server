@@ -82,7 +82,26 @@ $numbers = filter_var($_POST['numbers'], FILTER_SANITIZE_SPECIAL_CHARS);
 	    $count = 0;
        if (!isset($feed) or !isset($feed->channel) or !isset($feed->channel->item))
            return;
-        echo json_encode($feed);
+        $responce  = new stdClass();
+        $arr = array();
+        foreach ($feed->channel->item as $item)
+        //foreach ($feed['channel']->item as $item)         
+        {
+            $obj  = new stdClass();
+            $title = $item->title;
+            $title = str_replace("<b>", "", $title);
+            $subject = str_replace("</b>", "", $title);
+            $link = $item->link;
+
+            $description = $item->description;
+            $description = str_replace("<b>", "", $description);
+            $body = str_replace("</b>", "", $description);
+            $obj->title = $subject;
+            $obj->description = $body;
+            $arr[] = $obj;
+        }
+        $responce->items = $arr;
+        echo json_encode($responce);
 	    die();
       
    
