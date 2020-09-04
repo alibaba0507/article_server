@@ -56,8 +56,10 @@ $numbers = filter_var($_POST['numbers'], FILTER_SANITIZE_SPECIAL_CHARS);
         }else{
             if ($_POST['feedsource'] == 'yahooanswers'){
                  // $urlsource = $baseurl ."/yahooanswers.php";//?
+                 //https://answers.search.yahoo.com/search?p=
                  $fields = array ('keyword' => (($keyword)),
-                                  'url' =>  ('http://answers.yahoo.com/search/search_result?p='),
+                                  /*'url' =>  ('http://answers.yahoo.com/search/search_result?p='),*/
+								   'url' =>  ('https://answers.search.yahoo.com/search?p='),
                                    'end' => ('&submit-go=Search+Y!+Answers') );
             }else if ($_POST['feedsource'] == 'bing') {
                 //$urlsource = $baseurl ."/bingnews.php";//?
