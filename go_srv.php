@@ -39,7 +39,19 @@ $numbers = filter_var($_POST['numbers'], FILTER_SANITIZE_SPECIAL_CHARS);
 	$_POST['urllink'] = '';
     $keywords=filter_var($_POST['keywords'], FILTER_SANITIZE_SPECIAL_CHARS);// $_POST['keywords'];
     $urllink =filter_var($_POST['urllink'], FILTER_SANITIZE_SPECIAL_CHARS);// $_POST['urllink'];
-	if ($_POST['feedsource'] == 'user_urls')
+	  if ($_POST['feedsource'] == 'only_spin')
+        {
+            // debug(">>>>>>>>>>>>>>> BEFORE ONLY SPIN BEFORE  >>>>>>>>>>>>>>>>>>>>>");
+            $fields = array ('spin' => urlencode($_POST['only_spin_txt'])); 
+            //debug(">>>>>>>>>>>>>>> BEFORE ONLY SPIN BEFORE  >>>>>>>>>>>>>>>>>>>>>",$fields);            
+            $rss = '';
+            include 'only_spin.php';
+          //  debug(">>>>>>>>>>>>>>> ONLY SPIN AFTER SPIN PHP  >>>>>>>>>>>>>>>>>>>>>",$rss);
+            $feed = createFeed($rss);
+                   
+           
+        }
+    else if ($_POST['feedsource'] == 'user_urls')
         {
 			if (!isset($_POST['custom_urls']))
             { 
