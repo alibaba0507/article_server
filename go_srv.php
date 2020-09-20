@@ -46,11 +46,11 @@ $numbers = filter_var($_POST['numbers'], FILTER_SANITIZE_SPECIAL_CHARS);
 	  if ($_POST['feedsource'] == 'only_spin')
         {
             // debug(">>>>>>>>>>>>>>> BEFORE ONLY SPIN BEFORE  >>>>>>>>>>>>>>>>>>>>>");
-            $source = urlencode($_POST['only_spin_txt']);
-            include $dir.'/unike.php';
+            $source = _POST['only_spin_txt'];//urlencode($_POST['only_spin_txt']);
+            include '/unike.php';
             //$newbody = $article;
 			//$fields = array ('spin' => urlencode($_POST['only_spin_txt'])); 
-			$fields = array ('spin' => $article); 
+			$fields = array ('spin' => urlencode($article)); 
 		   //debug(">>>>>>>>>>>>>>> BEFORE ONLY SPIN BEFORE  >>>>>>>>>>>>>>>>>>>>>",$fields);
            // var_dump($fields);            
             $rss = '';
