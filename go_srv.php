@@ -49,7 +49,10 @@ $numbers = filter_var($_POST['numbers'], FILTER_SANITIZE_SPECIAL_CHARS);
             include $dir.'/unike.php';
             //$newbody = $article;
 			//$fields = array ('spin' => urlencode($_POST['only_spin_txt'])); 
-			$fields = array ('spin' => urlencode(/*$article*/$rawarticle)); 
+			if (isset($_POST['raw']))
+			 $fields = array ('spin' => urlencode(/*$article*/$rawarticle)); 
+		    else
+			  $fields = array ('spin' => urlencode($article)); 
 		   //debug(">>>>>>>>>>>>>>> BEFORE ONLY SPIN BEFORE  >>>>>>>>>>>>>>>>>>>>>",$fields);
            // var_dump($fields);            
             $rss = '';
