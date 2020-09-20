@@ -2,8 +2,9 @@
 set_error_handler(function($errno, $errstr, $errfile, $errline ){
     throw new ErrorException($errstr, $errno, 0, $errfile, $errline);
 });
-/*
+
 $dir = (dirname(__FILE__));
+/*
 require_once($dir.'/config/config.php');
 include $dir.'/utils/utils.php';
 $base_url = $options->host.((strlen(trim($options->base_html_dir))>0)?'/'.$options->base_html_dir:'');//'/'.$options->base_html_dir;
@@ -45,8 +46,12 @@ $numbers = filter_var($_POST['numbers'], FILTER_SANITIZE_SPECIAL_CHARS);
 	  if ($_POST['feedsource'] == 'only_spin')
         {
             // debug(">>>>>>>>>>>>>>> BEFORE ONLY SPIN BEFORE  >>>>>>>>>>>>>>>>>>>>>");
-            $fields = array ('spin' => urlencode($_POST['only_spin_txt'])); 
-            //debug(">>>>>>>>>>>>>>> BEFORE ONLY SPIN BEFORE  >>>>>>>>>>>>>>>>>>>>>",$fields);
+            $source = urlencode($_POST['only_spin_txt']);
+            include $dir.'/unike.php';
+            //$newbody = $article;
+			//$fields = array ('spin' => urlencode($_POST['only_spin_txt'])); 
+			$fields = array ('spin' => $article); 
+		   //debug(">>>>>>>>>>>>>>> BEFORE ONLY SPIN BEFORE  >>>>>>>>>>>>>>>>>>>>>",$fields);
            // var_dump($fields);            
             $rss = '';
             include 'only_spin.php';
