@@ -54,7 +54,7 @@ $numbers = filter_var($_POST['numbers'], FILTER_SANITIZE_SPECIAL_CHARS);
 		    else
 			  $fields = array ('spin' => urlencode($article)); 
 		   //debug(">>>>>>>>>>>>>>> BEFORE ONLY SPIN BEFORE  >>>>>>>>>>>>>>>>>>>>>",$fields);
-            var_dump($fields);            
+            //var_dump($fields);            
             $rss = '';
             include 'only_spin.php';
           //  debug(">>>>>>>>>>>>>>> ONLY SPIN AFTER SPIN PHP  >>>>>>>>>>>>>>>>>>>>>",$rss);
