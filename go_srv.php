@@ -4,13 +4,12 @@ set_error_handler(function($errno, $errstr, $errfile, $errline ){
 });
 
 $dir = (dirname(__FILE__));
-/*
 require_once($dir.'/config/config.php');
 include $dir.'/utils/utils.php';
 $base_url = $options->host.((strlen(trim($options->base_html_dir))>0)?'/'.$options->base_html_dir:'');//'/'.$options->base_html_dir;
 $home = $base_url; 
 $home_inc =$options->base_include_dir;
-*/
+
 $hasValidUser = true;
 $feed = new stdClass();
 if (!isset($_POST['numbers']))
@@ -47,7 +46,7 @@ $numbers = filter_var($_POST['numbers'], FILTER_SANITIZE_SPECIAL_CHARS);
         {
             // debug(">>>>>>>>>>>>>>> BEFORE ONLY SPIN BEFORE  >>>>>>>>>>>>>>>>>>>>>");
             $source = $_POST['only_spin_txt'];//urlencode($_POST['only_spin_txt']);
-            include '/unike.php';
+            include $dir.'/unike.php';
             //$newbody = $article;
 			//$fields = array ('spin' => urlencode($_POST['only_spin_txt'])); 
 			$fields = array ('spin' => urlencode($article)); 
