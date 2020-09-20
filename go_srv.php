@@ -45,7 +45,7 @@ $numbers = filter_var($_POST['numbers'], FILTER_SANITIZE_SPECIAL_CHARS);
 	  if ($_POST['feedsource'] == 'only_spin')
         {
             // debug(">>>>>>>>>>>>>>> BEFORE ONLY SPIN BEFORE  >>>>>>>>>>>>>>>>>>>>>");
-            $source = /*urldecode*/($_POST['only_spin_txt']);
+            $source = urldecode($_POST['only_spin_txt']);
             include $dir.'/unike.php';
             //$newbody = $article;
 			//$fields = array ('spin' => urlencode($_POST['only_spin_txt'])); 
@@ -54,7 +54,7 @@ $numbers = filter_var($_POST['numbers'], FILTER_SANITIZE_SPECIAL_CHARS);
 		    else
 			  $fields = array ('spin' => urlencode($article)); 
 		   //debug(">>>>>>>>>>>>>>> BEFORE ONLY SPIN BEFORE  >>>>>>>>>>>>>>>>>>>>>",$fields);
-           // var_dump($fields);            
+            var_dump($fields);            
             $rss = '';
             include 'only_spin.php';
           //  debug(">>>>>>>>>>>>>>> ONLY SPIN AFTER SPIN PHP  >>>>>>>>>>>>>>>>>>>>>",$rss);
