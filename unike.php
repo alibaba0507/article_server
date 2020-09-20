@@ -17,7 +17,7 @@ $fdat = fopen('th_en_US_new.dat', 'r');
 $tmp_dic_arr = array(); // buffer array for used words
 //************************* Cleaning **********************************//
 // remove all links
-$source = preg_replace("/<a[^>]+>/i", "", $source);
+//$source = preg_replace("/<a[^>]+>/i", "", $source);
 // replace with selected keywords
 //include 'unik.php';
 $search = $keyword;//$GLOBALS['keyword']; // search fields are also keywords
