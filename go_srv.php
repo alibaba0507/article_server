@@ -64,13 +64,13 @@ $numbers = filter_var($_POST['numbers'], FILTER_SANITIZE_SPECIAL_CHARS);
         }
     else if ($_POST['feedsource'] == 'user_urls')
         {
-			if (!isset($_POST['custom_urls']))
+			if (!isset($_POST['keyword']))
             { 
                 $feed->error = 'Missing custom_urls parameters';
 				echo json_encode($feed);
 				die();
 			}
-             $fields = array ('keyword' => (urlencode($_POST['custom_urls'])));
+             $fields = array ('keyword' => (urlencode($_POST['keyword'])));
             $rss = '';
             include 'custom_urls.php';
           //  debug(">>>>>>>>>>>>>>> ONLY SPIN AFTER SPIN PHP  >>>>>>>>>>>>>>>>>>>>>",$rss);
