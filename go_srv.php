@@ -50,9 +50,9 @@ $numbers = filter_var($_POST['numbers'], FILTER_SANITIZE_SPECIAL_CHARS);
             //$newbody = $article;
 			//$fields = array ('spin' => urlencode($_POST['only_spin_txt'])); 
 			if (isset($_POST['raw']))
-			 $fields = array ('spin' => /*urlencode*/(preg_replace('/[[:^print:]]/', '', $rawarticle))); 
+			 $fields = array ('spin' => /*urlencode*/( $rawarticle)); 
 		    else
-			  $fields = array ('spin' => /*urlencode*/(preg_replace('/[[:^print:]]/', '', $article))); 
+			  $fields = array ('spin' => /*urlencode*/( $article)); 
 		   //debug(">>>>>>>>>>>>>>> BEFORE ONLY SPIN BEFORE  >>>>>>>>>>>>>>>>>>>>>",$fields);
             //var_dump($fields);            
             $rss = '';
@@ -122,7 +122,7 @@ $numbers = filter_var($_POST['numbers'], FILTER_SANITIZE_SPECIAL_CHARS);
             $description = str_replace("<b>", "", $description);
             $body = str_replace("</b>", "", $description);
             $obj->title = $subject;
-            $obj->description = $body;
+            $obj->description = preg_replace('/[[:^print:]]/', '', $body);//$body;
             $arr[] = $obj;
         }
         $responce->items = $arr;
