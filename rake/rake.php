@@ -24,7 +24,7 @@ $rake = RakePlus::create($text_rake);
 $keywords = $rake->keywords();
 //print_r($keywords);
 //echo "===============================================================================================================<br>";
-echo '<hr>';
+//echo '<hr>';
 $phrase_scores = $rake->sortByScore('desc')->scores();
 //print_r($phrase_scores);
 
