@@ -1,11 +1,11 @@
 <?php
-require 'src/AbstractStopwordProvider.php';
-require 'src/StopwordArray.php';
-require 'src/StopwordsPatternFile.php';
-require 'src/StopwordsPHP.php';
-require 'src/ILangParseOptions.php';
-require 'src/LangParseOptions.php';
-require 'src/RakePlus.php';
+require_once ('src/AbstractStopwordProvider.php');
+require_once ('src/StopwordArray.php');
+require_once ('src/StopwordsPatternFile.php');
+require_once ('src/StopwordsPHP.php');
+require_once ('src/ILangParseOptions.php');
+require_once ('src/LangParseOptions.php');
+require_once ('src/RakePlus.php');
 
 use DonatelloZa\RakePlus\RakePlus;
 if (!isset($text_rake))
