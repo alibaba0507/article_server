@@ -123,6 +123,9 @@ $numbers = filter_var($_POST['numbers'], FILTER_SANITIZE_SPECIAL_CHARS);
             $body = str_replace("</b>", "", $description);
             $obj->title = $subject;
             $obj->description = preg_replace('/[[:^print:]]/', '', $body);//$body;
+			$text_rake = $obj->description;
+			include 'rake/rake.php';
+			$obj->phrase_scores =  $phrase_scores;
             $arr[] = $obj;
         }
         $responce->items = $arr;
