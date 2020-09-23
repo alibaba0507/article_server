@@ -20,7 +20,7 @@ $text = "Criteria of compatibility of a system of linear Diophantine equations, 
     "of minimal generating sets of solutions for all types of systems are given.";
 */
 $text_rake = strip_tags($text_rake);
-$rake = RakePlus::create($text_rake);
+$rake = RakePlus::create($text_rake,'en_US', 10,false);
 $keywords = $rake->keywords();
 //print_r($keywords);
 //echo "===============================================================================================================<br>";
